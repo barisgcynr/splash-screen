@@ -8,9 +8,20 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class SplashScreenComponent implements OnInit {
 
+  windowWidth: string | undefined;
+  showSplash: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(()=> {
+      this.windowWidth = '-' + window.innerWidth + 'px';
+
+      setTimeout(() => {
+        this.showSplash = !this.showSplash;
+      }, 500);
+
+    },3000);
   }
 
 }

@@ -1,4 +1,5 @@
-<div class="app-splash-screen"> 
+<div class="app-splash-screen" *ngIf="showSplash"
+    [ngStyle]="{ left: windowWidth }"> 
     <div class="app-splash-screen-inner"> 
         <div class="app-logo material-icons">nature_people</div>
         <div class="app-label">GreenPeace</div>
